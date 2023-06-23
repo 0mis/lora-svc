@@ -165,7 +165,7 @@ data_svc/
 
 - 2， export inference model
 
-    > python svc_export.py --config configs/maxgan.yaml --checkpoint_path chkpt/svc/***.pt
+    > python svc_export.py --config configs/maxgan.yaml --checkpoint_path chkpt/svc/svc_00041000.pt
 
 - 3， use whisper to extract content encoding, without using one-click reasoning, in order to reduce GPU memory usage
 
@@ -179,7 +179,7 @@ data_svc/
 
 - 5，specify parameters and infer
 
-    > python svc_inference.py --config configs/maxgan.yaml --model maxgan_g.pth --spk ./configs/singers/singer0001.npy --wave test.wav --ppg test.ppg.npy --pit test.csv
+    > python svc_inference.py --config configs/maxgan.yaml --model maxgan_g.pth --spk ./configs/singers/aaq20minute.spk.npy --wave test.wav --ppg test.ppg.npy --pit test.csv
 
     when --ppg is specified, when the same audio is reasoned multiple times, it can avoid repeated extraction of audio content codes; if it is not specified, it will be automatically extracted;
 
